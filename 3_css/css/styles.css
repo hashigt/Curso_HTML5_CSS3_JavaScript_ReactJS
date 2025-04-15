@@ -222,3 +222,220 @@
         color: #fff;
     }
     
+    /* Texto alinhado */
+    /* Direita */
+    .Texto_alinhado {
+        text-align: right;
+    }
+
+    /* Centro */
+    .container-center {
+        text-align: center;
+        border: 1px solid greenyellow;
+        width: 300px;
+    }
+
+    /* Decoração de texto */
+    .underline {
+        text-decoration: underline;
+    }
+
+    .linha_cortando {
+        text-decoration: line-through;
+    }
+
+    .remove-underline {
+        text-decoration: none;
+        color: red
+    }
+
+    /* Transformação de texto */
+    .upper {
+        text-transform: uppercase;
+    }
+
+    .lower  {
+        text-transform: lowercase;
+    }
+
+    /* Espaçamento de letras */
+    .espacamento {
+        letter-spacing: 5px;
+    }
+
+    /* Fontes */
+    .serif {
+        font-family: Georgia;
+    }
+
+    .sans-serif {
+        font-family: sans-serif;
+    }
+
+    .monospace {
+        font-family: monospace;
+    }
+
+    .cursive {
+        font-family: cursive;
+    }
+    
+    .fantasy {
+        font-family: fantasy;
+    }
+
+    /* Fontes estilos */
+    .italico {
+        font-style: italic;
+    }
+
+    .oblique {
+        font-style: oblique;
+    }
+
+    /* Espessura da fonte */
+    .fino, .bold, .bolder  {
+        font-family: Helvetica;
+    }
+
+    .fino {
+        font-weight: 100;
+    }
+
+    .bold {
+        font-weight: 600;
+    }
+
+    .bolder {
+        font-weight: 900;
+    }
+
+    /* Tamanho da font */
+    .pequeno {
+        font-size: 10px;
+    }
+
+    .grande {
+        font-size: 69px;
+    }
+
+    /* Display */
+    .inline.box {
+        width: 50px;
+        height: 50px;
+        background-color: #15bb91;
+        margin: 10px;
+        display: inline-block;
+    }
+
+    .block {
+        background-color: #109e1c;
+        margin: 5px;
+        display: block;
+    }
+
+    .invisivel{
+        display: none;
+    }
+    
+    /* Relativo */
+    .relative {
+        position: relative;
+        background-color: #444;
+        color: #fff;
+        width: 100px;
+        height: 100px;
+        top: 100px;
+        left: 40px;
+    }
+
+    /* Absolute */
+    .absolute {
+        position: absolute;
+        background-color: #888;
+        color: #fff;
+        width: 100px;
+        height: 100px;
+        top: 2px;
+        right: 2px;
+    }
+
+    /* absolute e relative */
+    .relative-container {
+        width: 300px;
+        height: 300px;
+        border: 2px solid red;
+        margin-top: 120px;
+        position: relative;
+    }
+
+    .absolute-1,
+    .absolute-2 {
+        width: 50px;
+        height: 50px;
+        background-color: #845;
+        position: absolute;
+    }
+
+    .absolute-1 {
+        top: 10px;
+        right: 10px;
+    }
+
+    .absolute-2 {
+        bottom: 10px;
+        left: 10px;
+    }
+
+    /* Fixed */
+    .fixed { 
+        width: 100px;
+        height: 100px;
+        border: 2px solid red;
+        background-color: blue;
+        position: fixed;
+        top: 50px;
+        right: 100px;
+    }
+
+    /* Sticky */
+    .sticky {
+        width: 100px;
+        height: 100px;
+        border: 2px solid #993;
+        background-color: green;
+        position: sticky;
+        /* Só funciona se estiver uma direcional imposta */
+        top: 10px;
+    }
+
+    /* z-index */
+    .absolute-3,
+    .absolute-4,
+    .absolute-5 {
+        width: 50px;
+        height: 50px;
+        background-color: #579;
+        position: absolute;
+    }
+
+    .absolute-3{
+        top: 0px;
+        left: 0px;
+        /* colocando o 3 ele vai ficar na frente de qualquer que seja 2 ou 1 */
+        z-index: 3;
+    }
+
+    .absolute-4{
+        top: 10px;
+        left: 10px;
+        background-color: #111122;
+        z-index: 2;
+    }
+
+    .absolute-5 {
+        top: 40px;
+        left: 40px;
+        background-color: #202fda;
+    }
+    
