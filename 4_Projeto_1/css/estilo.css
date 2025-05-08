@@ -2,6 +2,8 @@ html {
     font-family: helvetica;
     background-image: url("../img/wp14340124.jpg");
     color: #111;
+    background-size: cover;
+    background-position: center;
 }
 
 .container {

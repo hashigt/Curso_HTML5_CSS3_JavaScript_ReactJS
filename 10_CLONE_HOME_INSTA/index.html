@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon"> <!-- Muda o ícone na barra do site -->
+</head>
+<body>
+    <main>
+        <div class="main-container">
+            <!-- Banner container -->
+            <div class="banner-container">
+                <img src="img/banner2.png" alt="Crie uma conta no Instagram">
+            </div>
+            <!-- Login e Registro -->
+            <div id="form-container">
+                <div id="form-box">
+                    <img id="logo-insta" src="img/logo_instagram.png" alt="Instagram"> <!-- logo do instagram -->
+                    <form id="login-form"> <!-- O input vai deixar o que esta dentro "" escrito na caixa de texto -->
+                        <input 
+                        type="text" 
+                        name="usarname" 
+                        placeholder="Número de telefone, usuário ou e-mail" 
+                        />
+                        <input type="password" name="password" id="Senha" placeholder="Senha"/> <!-- Onde vai colocar senha-->
+                        <input type="submit" value="Entrar"/> <!-- botão para entrar-->
+                    </form>
+                    <div class="separator">
+                        <div class="line"></div>
+                        <span>OU</span>
+                    </div>
+                    <div id="other-links">
+                        <div id="facebook-login">
+                            <a href="#">
+                             <img src="img/logo_facebook.svg" alt="Facebook login">
+                             <span>Entrar com o Facebook</span>
+                            </a>
+                        </div>
+                        <div id="forgot-pass">
+                            <a href="#">Esqueceu a senha?</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="register-container">
+                  <p>Não tem uma conta? <a href="#">Cadastre-se</a></p> <!-- O href torna o texto ou imagem em um botão que vai direcionar para outra pagina-->
+                </div>
+                <div id="get-app-container">
+                    <p>Obtenha o aplicativo.</p>
+                    <a href="#">
+                        <img src="img/apple_btn.png" alt="Apple store">
+                    </a>
+                    <a href="#">
+                        <img src="img/gplay_btn.png" alt="Google play">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <nav>
+            <ul id="footer-links">
+                <li><a href="#">Meta</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Ajuda</a></li>
+                <li><a href="#">API</a></li>
+                <li><a href="#">Privacidade</a></li>
+                <li><a href="#">Termos</a></li>
+                <li><a href="#">Principais Contas</a></li>
+                <li><a href="#">Hashtags</a></li>
+                <li><a href="#">Localização</a></li>
+                <li><a href="#">Instagram Lite</a></li>
+            </ul>
+        </nav>
+        <p id="copyright">&copy;2025 Instagram from Meta</p> <!-- &copy; se torna no c com circulo envolta -->
+    </footer>
+</body>
+</html>

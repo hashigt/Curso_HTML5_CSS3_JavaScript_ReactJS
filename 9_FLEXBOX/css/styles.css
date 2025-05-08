@@ -1,0 +1,194 @@
+body {
+    padding-bottom: 500px;
+}
+
+/* 1 - Flex */
+.flex {
+    display: flex;
+    background-color: #ddd;
+    margin-bottom: 20px;
+}
+
+/* 2 - flex column */
+.flex-column {
+    display: flex;
+    flex-direction: column; /* Com o column o flex faz com que os intens fiquem 1 embaixo do outro*/
+    background-color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* 3 - wrap */
+.wrap {
+    display: flex;
+    flex-wrap: wrap; /* com o wrap ele vai colocar para a linha de baixo se o item exceder o tamanha */
+    margin-bottom: 20px;
+}
+
+.box {
+    height: 40px;
+    width: 33%; /* Delimitando assim só 3 vão ficar na mesma linha, já que 100 / 33 = 3*/
+    border: 1px solid red;
+}
+
+/*  4 - justify content */
+.center,
+.space-around,
+.space-between,
+.end { 
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.center .box,
+.space-around .box,
+.space-between .box,
+.end .box {
+    width: 50px;
+}
+
+.center {
+    justify-content: center; /*para centralizar o que está dentro na horizontal */
+}
+
+.space-around {
+    justify-content: space-around; /* Alinha com um espaçamento entre eles*/
+}
+
+.space-between {
+    justify-content: space-between; /* Alinha com um espaçamento maior entre eles*/
+}
+
+.end {
+    justify-content: end; /* Alinha no final*/
+}
+
+/*  5 - Alinhamento de itens na vertical  */
+.align-center,
+.flex-end,
+.stretch { 
+    display: flex;
+    margin-bottom: 20px;
+    height: 200px;
+    border: 1px solid blue;
+}
+
+.align-center .box,
+.flex-end .box,
+.stretch .box {
+    width: 50px;
+}
+
+.align-center {
+    align-items: center; /* Alinhamento vertical para o centro*/
+    justify-content: center;
+}
+
+.flex-end {
+    align-items: end; /* Alinhamento vertical para o final*/
+}
+
+.stretch {
+    align-items: stretch; /* se alonga até preencher a coluna toda na vertical*/
+}
+
+.stretch .box {
+    height: auto;
+}
+
+/* 6 - gap */
+.gap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid green;
+    gap: 10px; /* O gap da um espaço entre os itens da flex igualmente */
+}
+
+.gap .box {
+    width: 32%;
+}
+
+/* 7 - order */
+.order {
+    display: flex;
+}
+
+#um {
+    order: 1; /* order muda a ordem dos itens de um flex, sendo do menor para o maior */
+}
+
+#dois {
+    order: 2;
+}
+
+#tres {
+    order: 3;
+}
+
+/* 8 - grow */
+.grow {
+    display: flex;
+}
+
+.grow .box {
+    flex: 1;
+}
+
+.grow .grande {
+    flex: 2;
+}
+
+/* Basic */
+.basis {
+    display: flex;
+}
+
+.basis .box {
+    flex-basis: 20px; /* Configura a 20PX */
+}
+
+.basis .big {
+    flex-grow: 1; /* A  big vai preencher os resto do espaço da tela */
+}
+
+/* 10 - Shrink */
+.shrink {
+    display: flex;
+}
+
+.shrink .box {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 250px;
+    width: auto;
+}
+
+.shrink .pequeno {
+    flex-shrink: 2; /* Quando a tela diminuir o elemento com o shrink que vai diminuir */
+}
+
+/* 11 - flex unidos */
+.abreviacao {
+    display: flex;
+}
+
+.abreviacao .box {
+    width: auto;
+    flex: 1 1 50px;
+}
+
+.abreviacao .diferente {
+    flex: 3 1 400px; /* 3=brow 1=shrink e 400px=basis */
+}
+
+/* auto alinhamento */
+.auto-alinhamento {
+    height: 300px;
+    display: flex;
+    align-items: flex-end; /* alinhamento no final */
+    border: 1px solid purple;
+}
+
+.auto-alinhamento .diferente {
+    align-self: center; /* faz o alinhamento no centro */
+}
