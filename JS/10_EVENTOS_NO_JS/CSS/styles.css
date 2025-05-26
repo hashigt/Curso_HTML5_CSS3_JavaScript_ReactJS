@@ -1,3 +1,14 @@
 body {
     margin-bottom: 1000px;
 }
+
+#btn-container {
+    padding: 30px;
+    background-color: green;
+}
+
+#my-button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #347ddd;
+}
