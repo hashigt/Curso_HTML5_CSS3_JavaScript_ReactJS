@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada JS</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <script src="JS/scripts.js" defer></script>
+</head>
+<body>
+    <h2>Digite o número e confirme para gerar a tabuada</h2>
+    <form id="multiplicacao-form">
+        <div class="form-control">
+            <label for="number">Tabuada do:</label>
+            <input type="number" name="number" id="number" placeholder="3">
+        </div>
+        <div class="form-control">
+            <label for="multiplicador">Multiplicar até:</label>
+            <input type="number" name="multiplicador" id="multiplicador" value="10">
+        </div>
+        <input type="submit" value="Calcular">
+    </form>
+    <div id="multiplicacao-table">
+        <h2 id="multiplicacao-title">Tabuada do número: <span></span></h2>
+        <div id="multiplicacao-operacoes">
+            <p>Informe um número para Calcular uma tabuada...</p>
+            <!-- <div class="row"> só serviu para ser um exemplo e funcional de css
+                <div class="operacao">5 x 1 = </div>
+                <div class="result">5</div>
+            </div>
+            <div class="row">
+                <div class="operacao">5 x 2 = </div>
+                <div class="result">10</div>
+            </div> -->
+        </div>
+    </div>
+</body>
+</html>
