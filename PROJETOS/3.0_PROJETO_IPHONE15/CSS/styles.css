@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: verdana;
+    font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 ul {
@@ -14,7 +14,7 @@ a {
 
 /* navbar */
 header nav{
-    background-color: #333;
+    background-color: #fff;
 }
 
 #navbar {
@@ -28,7 +28,7 @@ header nav{
 }
 
 #navbar a {
-    color: #f4f4f7;
+    color: #a1a1a1;
     transition: .4s;
 }
 
@@ -59,7 +59,7 @@ header nav{
 }
 
 #bottom-header-inner a {
-    margin: 0 0.5rem; /*dando espaço entre os links */
+    margin: 0 0.5rem; /* dando espaço entre os links */
 }
 
 #bottom-header-inner .btn,
@@ -71,28 +71,51 @@ header nav{
 }
 /* Conteúdo */
 #ribbon {
+    display: flex;
     text-align: center;
-    padding: 1rem;
+    margin-right: 50px;
     background-color: #f5f5f7;
+    padding: 15px;
+    width: 100px;
     color: #1d1d1d;
     font-size: 0.8rem;
 }
 
-#ribbon a{
-    color: #0071e3;
+#modelo #mais-claro{
+    color: #adadad;
+}
+
+#iphone-15,
+#iphone-plus{
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    margin-bottom: 1rem;
+   
 }
 
 #main-content{
     text-align: center;
-    color: #1d1d1d;
+    color: #1d1d1f;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+#inicio{
+text-align: left;
+margin-left: 70px;
+display: inline;
+margin-top: 45px;
+}
+
 #title {
-    margin: 1rem;
-    font-size: 1.2rem;
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: -.003em;
+    line-height: 1.0834933333;
+    padding-bottom: 13px;
 }
 
 #main-content #subtitle {
@@ -103,15 +126,14 @@ header nav{
 
 #main-content #description {
     max-width: 600px;
-    margin: 1rem auto;
     font-size: 1.1rem;
     line-height: 1.5rem;
 }
 
 #main-content #preco {
-    font-size: 1.3rem;
-    color: #86868b;
-    margin: 2rem;
+    font-size: 1rem;
+    color: #1d1d1f;
+    
 }
 
 #main-content .btn {
