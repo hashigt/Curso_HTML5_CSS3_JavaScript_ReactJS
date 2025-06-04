@@ -1,188 +1,188 @@
-// //Orientação a objetos é uma paradigma de progamação
-// // 1 - métodos 
-// const animal = {
-//     nome: "marley",
-//     latir: function () {
-//         console.log("au au")
-//     }
-// }
+//Orientação a objetos é uma paradigma de progamação
+// 1 - métodos 
+const animal = {
+    nome: "marley",
+    latir: function () {
+        console.log("au au")
+    }
+}
 
-// console.log(animal.nome)
+console.log(animal.nome)
 
-// animal.latir()
+animal.latir()
 
-// // aprofundando
-// const pessoa = { //cria objeto pessoa
-//     nome: "Lorenzo",
+// aprofundando
+const pessoa = { //cria objeto pessoa
+    nome: "Lorenzo",
 
-//     getNome: function() {
-//         return this.nome
-//     },
+    getNome: function() {
+        return this.nome
+    },
 
-//     setNome: function(novoNome) {
-//         this.nome = novoNome
-//     },
-// }
+    setNome: function(novoNome) {
+        this.nome = novoNome
+    },
+}
 
-// console.log(pessoa.nome)
+console.log(pessoa.nome)
 
-// console.log(pessoa.getNome())
+console.log(pessoa.getNome())
 
-// pessoa.setNome("Bernardo")
+pessoa.setNome("Bernardo")
 
-// console.log(pessoa.getNome())
+console.log(pessoa.getNome())
 
-// // 2 - Prototype
-// //fallback: quando uma propriedade não existe em um dado/objeto, ela é procurada no seu ancestral
-// const text = "abc"
+// 2 - Prototype
+//fallback: quando uma propriedade não existe em um dado/objeto, ela é procurada no seu ancestral
+const text = "abc"
 
-// console.log(Object.getPrototypeOf(text)) //Object.getPrototypeOf mostra o ancestral do dado
+console.log(Object.getPrototypeOf(text)) //Object.getPrototypeOf mostra o ancestral do dado
 
-// const bool = true
+const bool = true
 
-// console.log(Object.getPrototypeOf(bool))
+console.log(Object.getPrototypeOf(bool))
 
-// const arr = []
+const arr = []
 
-// console.log(Object.getPrototypeOf(arr))
+console.log(Object.getPrototypeOf(arr))
 
 
-// const myObject = {
-//     a: "b"
-// }
+const myObject = {
+    a: "b"
+}
 
-// console.log(Object.getPrototypeOf(myObject))
+console.log(Object.getPrototypeOf(myObject))
 
-// console.log(Object.getPrototypeOf(myObject) === Object.prototype) //Object é pai de myObject
+console.log(Object.getPrototypeOf(myObject) === Object.prototype) //Object é pai de myObject
 
-// const segundoObject = Object.create(myObject) //cadeia de prototype, um objeto herdando outro
+const segundoObject = Object.create(myObject) //cadeia de prototype, um objeto herdando outro
 
-// console.log(segundoObject)
+console.log(segundoObject)
 
-// console.log(segundoObject.a) //conseguimos acessar a, sem ter sido criado em segundoObject
+console.log(segundoObject.a) //conseguimos acessar a, sem ter sido criado em segundoObject
 
-// console.log(Object.getPrototypeOf(segundoObject) === myObject) //myObject é pai de segundoObject
+console.log(Object.getPrototypeOf(segundoObject) === myObject) //myObject é pai de segundoObject
 
-// // 3 - Classes básicas
-// const cachorro = {
-//     raca: null,
-// }
+// 3 - Classes básicas
+const cachorro = {
+    raca: null,
+}
 
-// const pastorAlemao = Object.create(cachorro) //cria um objeto que herda classe cachorro
+const pastorAlemao = Object.create(cachorro) //cria um objeto que herda classe cachorro
 
-// pastorAlemao.raca = "Pastor Alemão" //usa do cachorro e raca que é nulo e substitui por "Pastor Alemão"
+pastorAlemao.raca = "Pastor Alemão" //usa do cachorro e raca que é nulo e substitui por "Pastor Alemão"
 
-// console.log(pastorAlemao)
+console.log(pastorAlemao)
 
-// const pinscher = Object.create(cachorro) //cria um objeto que herda classe cachorro
+const pinscher = Object.create(cachorro) //cria um objeto que herda classe cachorro
 
-// pinscher.raca = "Pinscher" //usa do cachorro e raca que é nulo e substitui por "Pinscher"
+pinscher.raca = "Pinscher" //usa do cachorro e raca que é nulo e substitui por "Pinscher"
 
-// console.log(pinscher)
+console.log(pinscher)
 
-// // 4 - classes baseadas em funções construtoras
-// function criarCachorro(nome, raca) {
-//     const cachorro = Object.create({})  //conseguimos iniciar as propriedades com a criação do objeto
+// 4 - classes baseadas em funções construtoras
+function criarCachorro(nome, raca) {
+    const cachorro = Object.create({})  //conseguimos iniciar as propriedades com a criação do objeto
 
-//     cachorro.nome = nome
-//     cachorro.raca = raca
+    cachorro.nome = nome
+    cachorro.raca = raca
 
-//     return cachorro
-// }
+    return cachorro
+}
 
-// const neve = criarCachorro("neve", "Labrador") //utilizando a classe criarCachorro
+const neve = criarCachorro("neve", "Labrador") //utilizando a classe criarCachorro
 
-// console.log(neve)
+console.log(neve)
 
-// const night = criarCachorro("Night", "pitbull")
+const night = criarCachorro("Night", "pitbull")
 
-// console.log(night)
+console.log(night)
 
-// // 5 - Funções como classe
-// //O new é utilizado para instanciar novos objetos(como varias outras linguagens)
+// 5 - Funções como classe
+//O new é utilizado para instanciar novos objetos(como varias outras linguagens)
 
-// function Cachorro(nome, raca) {//não precisa do objeto vazio como anteriormente
-//     this.nome = nome 
-//     this.raca = raca
-// }
+function Cachorro(nome, raca) {//não precisa do objeto vazio como anteriormente
+    this.nome = nome 
+    this.raca = raca
+}
 
-// const viraLata = new Cachorro("Bob", "Vira-lata") //será igual a anterior mas com uma nova palavra a new
+const viraLata = new Cachorro("Bob", "Vira-lata") //será igual a anterior mas com uma nova palavra a new
 
-// console.log(viraLata)
+console.log(viraLata)
 
-// // 6 - Métodos na função construtora
-// Cachorro.prototype.uivar = function() { //Para adicionar métodos antes da criação do objeto,podemos acessar o prototype e colocá-los lá
-//     console.log("Auuuuuu")
-// }
+// 6 - Métodos na função construtora
+Cachorro.prototype.uivar = function() { //Para adicionar métodos antes da criação do objeto,podemos acessar o prototype e colocá-los lá
+    console.log("Auuuuuu")
+}
 
-// console.log(Cachorro.prototype)
+console.log(Cachorro.prototype)
 
-// viraLata.uivar()
+viraLata.uivar()
 
-// // 7 - classes es6
-// //Nas versões mais atuais do js abandonamos as functions e utilizamos as classes
+// 7 - classes es6
+//Nas versões mais atuais do js abandonamos as functions e utilizamos as classes
 
-// class GatoClasse {
-//     constructor(nome, raca){
-//         this.nome = nome
-//         this.raca = raca
-//     }
-// }
+class GatoClasse {
+    constructor(nome, raca){
+        this.nome = nome
+        this.raca = raca
+    }
+}
 
-// const videl = new GatoClasse("Videl", "Pelo curto brasileiro")
+const videl = new GatoClasse("Videl", "Pelo curto brasileiro")
 
-// console.log(videl)
+console.log(videl)
 
-// // 8 - mais sobre classes
-// //não podemos adicionar propriedades diretamente as classes
-// //Precisa ser feito ao inicia-la ou pelo prototype
+// 8 - mais sobre classes
+//não podemos adicionar propriedades diretamente as classes
+//Precisa ser feito ao inicia-la ou pelo prototype
 
-// class Caminhao {
-//     constructor(eixos, cor){
-//         this.eixos = eixos
-//         this.cor = cor
-//     }
+class Caminhao {
+    constructor(eixos, cor){
+        this.eixos = eixos
+        this.cor = cor
+    }
 
-//     descreverCaminhao() {
-//         console.log(`Este caminhão tem ${this.eixos} eixos e é da cor ${this.cor}`)
-//     }
-// }
+    descreverCaminhao() {
+        console.log(`Este caminhão tem ${this.eixos} eixos e é da cor ${this.cor}`)
+    }
+}
 
-// const descr = new Caminhao(5, "Azul")
+const descr = new Caminhao(5, "Azul")
 
-// console.log(descr)
+console.log(descr)
 
-// descr.descreverCaminhao()
+descr.descreverCaminhao()
 
-// Caminhao.prototype.motor = 4.0 //esse é o mode de adicionar propriedades corretamente
+Caminhao.prototype.motor = 4.0 //esse é o mode de adicionar propriedades corretamente
 
-// const c2 = new Caminhao(7, "Amarelo")
+const c2 = new Caminhao(7, "Amarelo")
 
-// console.log(c2.motor)
+console.log(c2.motor)
 
-// // 9 - override
-// class Humano {
-//     constructor(nome, idade){
-//         this.nome = nome
-//         this.idade = idade
-//     }
-// }
+// 9 - override
+class Humano {
+    constructor(nome, idade){
+        this.nome = nome
+        this.idade = idade
+    }
+}
 
-// const novoNome = new Humano("Lorenzo", 19)
+const novoNome = new Humano("Lorenzo", 19)
 
-// console.log(novoNome)
+console.log(novoNome)
 
-// console.log(Humano.prototype.idade)
+console.log(Humano.prototype.idade)
 
-// Humano.prototype.idade = "Não definido"
+Humano.prototype.idade = "Não definido"
 
-// console.log(novoNome.idade)
+console.log(novoNome.idade)
 
-// console.log(Humano.prototype.idade)
+console.log(Humano.prototype.idade)
 
-// 10 - Symbol
-//Quando utilizamos o recurso de symbol com classe, é  possível uma propriedade única e imutável
-//é útil quando a um dado que se repetirá em todos os objetos criados a partir da classe
+10 - Symbol
+// Quando utilizamos o recurso de symbol com classe, é  possível uma propriedade única e imutável
+// é útil quando a um dado que se repetirá em todos os objetos criados a partir da classe
 class Aviao {
     constructor(marca, turbinas){
         this.marca = marca

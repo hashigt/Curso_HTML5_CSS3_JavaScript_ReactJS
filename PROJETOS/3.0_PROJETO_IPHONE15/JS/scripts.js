@@ -16,7 +16,7 @@ button.forEach((btn) => {
     buttons.querySelector(".color").classList.add("selected")
 
     image.classList.add("changing") //abaixa a opacidade
-    image.setAttribute("src",`img/iphone_${id}.jpg`) //vai mudar com base no nome do jpg
+    image.setAttribute("src",`img/iphone_${id}.webp`) //vai mudar com base no nome do webp
     
     setTimeout(() => {
         image.classList.toggle("changing")
