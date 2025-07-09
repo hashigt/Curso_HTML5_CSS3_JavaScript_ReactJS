@@ -120,3 +120,33 @@ button:hover {
     padding-bottom: .5rem;
     border-bottom: 1px solid #444;
 }
+
+.table-header h4,
+.table-data p {
+    flex: 1; /* Igualando os tamanhos */
+}
+
+.table-header h4:nth-child(3),
+.table-data p:nth-child(3) {
+    max-width: 80px; /*delimitando o espaço do terceiro elemento*/
+}
+
+#back-btn {
+    align-self: center; /* pega toda o espaço do objeto e centraliza com base no flex */
+}
+
+.good{
+    color: #12db34;
+}
+
+.low {
+    color: #dbce12;
+}
+
+.medium{
+    color: #db6212;
+}
+
+.high{
+    color: #db1912;
+}
