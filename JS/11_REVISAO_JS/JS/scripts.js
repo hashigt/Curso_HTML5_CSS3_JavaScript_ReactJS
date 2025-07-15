@@ -120,11 +120,68 @@ const ano = 20
 
 console.log(`O nome do usuário é ${userName} e ele tem ${ano} anos`)
 
-// 5 - Descructuring
+// 6 - Descructuring
 const frutas = ["Maça", "Mamão", "Laranja"]
 
 const [f1, f2 , f3] = frutas //faz o contrario, cria a um nome para cada variavel e depois chama o array "Frutas"
 
 console.log(f1, f3) //só utilizando o que quiser
 
-// 6 - Spread operator
+// 7 - Spread operator
+const a1 = [1, 2, 3]
+const a2 = [4, 5, 6]
+
+const a3 = [...a1, ...a2] // assim vai trazer os valores não o array todo
+
+console.log(a3) //a1 e a2 = a3
+
+const a4 = [0, ...a3, 7] // podendo ser adicionado outros números
+
+console.log(a4)
+
+const carNome = {Nome:"Gol-Quadrado"}
+const carMarca = {Marca:"VW"}
+const carInfo = {kw: 10000, preço: 45333}
+
+const car = {...carNome, ...carMarca, ...carInfo} //podendo ser feito com string
+
+console.log(car)
+
+// 8 - Classes
+class produto {
+    constructor(nome, preco) {
+        this.nome = nome //adiciona nome a nova variavel recebida de nome
+        this.preco = preco //adiciona preco a nova variavel recebida de preco
+    }
+
+    produtoComDesconto(desconto) {
+        return this.preco * ((100 - desconto) / 100) //this aqui está buscando o valor da variavel que vai receber
+    }
+}
+
+const camisa = new produto("Camisa gola V", 20)
+
+console.log(camisa)
+
+console.log(camisa.produtoComDesconto(10)) //está buscando o preco da camisa que é 20 com o this e sendo adicionado 10 como o valor no desconto 20 * ((100 - 10)/100)
+
+// 9 - Herança
+class produtoComAtributos extends produto { //extends puxa do produto
+    constructor(nome, preco, cor){ //adiciona cor
+        super(nome, preco) //envia as propriedades
+        this.cor = cor 
+    }
+
+    cores() {
+        console.log("As cores são: ");
+        this.cor.forEach((color) => { //vai percorrer a lista e mostrar separados
+            console.log(color)
+        });
+    }
+}
+
+const hat = new produtoComAtributos("Chapéu", 35.34, ["Preto" , "Marrom"])
+
+console.log(hat)
+
+hat.cores()
