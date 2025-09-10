@@ -1,142 +1,143 @@
-// // 1 - Criando função
-// function minhaFuncao (){
-//     console.log("Testando")
-// }
+// 1 - Criando função
+function minhaFuncao (){
+    console.log("Testando")
+}
 
-// minhaFuncao() //Chamando a função
+minhaFuncao() //Chamando a função
 
-// const minhaFuncaoEmVariavel = function() {
-//     console.log("Função em variável")
-// }
+const minhaFuncaoEmVariavel = function() {
+    console.log("Função em variável")
+}
 
-// minhaFuncaoEmVariavel()
+minhaFuncaoEmVariavel() //assim usamos a função em uma variavel
 
-// function funcaoComParametro(txt) {
-//     console.log(`Imprimindo: ${txt}`)
-// }
+function funcaoComParametro(txt) { // (txt) é o parametro da função
+    console.log(`Imprimindo: ${txt}`)
+}
 
-// funcaoComParametro("imprimindo algo")
-// funcaoComParametro("Outra função")
+funcaoComParametro("imprimindo algo") // imprimindo algo vai ficar no lugar onde está o ${txt}
+funcaoComParametro("Outra função")
 
-// // 2 - Return
-// const a = 10
-// const b = 20
-// const c = 30
-// const d = 40
+// 2 - Return
+const a = 10
+const b = 20
+const c = 30
+const d = 40
 
-// function soma(n1, n2){ //cria a função e da "nomes" para as variaveis, normalment com algo que é relaciona ao que vai receber
-//     return n1 + n2
-// }
+function soma(n1, n2){ //cria a função e da "nomes" para as variaveis, onde n1 e n2 são os paramentros que vão ser utilizados na função normalment com algo que é relaciona ao que vai receber
+    return n1 + n2
+}
 
-// const resultado = soma(a,b) //chama a função e coloca em uma variavel
+const resultado1 = soma(a,b) //chama a função e coloca em uma variavel
 
-// console.log(resultado) //imprimi o resultado da soma no console
+console.log(resultado1) //imprimi o resultado da soma no console
 
-// console.log(soma(c,d)) //Ou pode ser feito assim, sem precisar colocar em uma variavel
+console.log(soma(c,d)) //Ou pode ser feito assim, sem precisar colocar em uma variavel
 
-// // 3 - Escopo da função
-// let y = 10
+// 3 - Escopo da função
+let y = 10
 
-// function testandoEscopo (){
-//     let y = 20
-//     console.log(`Y dentro da função é: ${y}`)
-// }
+function testandoEscopo (){
+    let y = 20
+    console.log(`Y dentro da função é: ${y}`)
+}
 
-// testandoEscopo()
+testandoEscopo()
 
-// console.log(`Y fora da função é: ${y}`)
+console.log(`Y fora da função é: ${y}`)
 
-// testandoEscopo()
+testandoEscopo()
 
-// // 4 - Escopo aninhado
-// let m = 10
+// 4 - Escopo aninhado
+let m = 10
 
-// function escopoAninhado(){
-//     let m = 20
+function escopoAninhado(){
+    let m = 20
 
-//     if (true) {
-//         let m = 30
+    if (true) {
+        let m = 30
 
-//         if(true){
-//             let m = 40
-//             console.log(m)
-//         }
+        if(true){
+            let m = 40
+            console.log(m)
+        }
 
-//         console.log(m)
-//     }
+        console.log(m)
+    }
 
-//     console.log(m)
-// }
+    console.log(m)
+}
 
-// escopoAninhado()
-// console.log(m)
+escopoAninhado()
+console.log(m)
 
-// // 5 - Arrow function
-// const testeArrow = () => { //A arrow function tem que estar dentro de uma variavel
-//     console.log("Esta é uma arrow function")
-// }
+// 5 - Arrow function
+const testeArrow = () => { //A arrow function tem que estar dentro de uma variavel
+    // é uma forma resumida de fazer uma função de forma mais facil
+    console.log("Esta é uma arrow function")
+}
 
-// testeArrow()
+testeArrow()
 
-// const parOuImpar = (n) => {
-//   if(n % 2 === 0 ){
-//     console.log(`${n} é par.`)
-//     return
-//   }
+const parOuImpar = (n) => { //n indicando que vai receber um número
+  if(n % 2 === 0 ){
+    console.log(`${n} é par.`)
+    return // para sair da função
+  }
     
-//   console.log(`${n} é impar.`)
+  console.log(`${n} é impar.`) // caso não entre o if
 
-// }
+}
 
-// parOuImpar(5)
-// parOuImpar(10)
+parOuImpar(5)
+parOuImpar(10)
 
-// // 6 - mais sobre arrow function
-// const raizQuadrada = (x) => { //Modo normal de arrow function
-//     return x * x
-// }
+// 6 - mais sobre arrow function
+const raizQuadrada = (x) => { //Modo normal de arrow function
+    return x * x
+}
 
-// console.log(raizQuadrada(4))
+console.log(raizQuadrada(4))
 
-// const raizQuadrada2 = (x) => x * x //Modo resumido, funciona da mesma maneira (só para quando for algo pequeno)
+const raizQuadrada2 = (x) => x * x //Modo resumido, funciona da mesma maneira (só para quando for algo pequeno)
 
-// console.log(raizQuadrada2(5))
+console.log(raizQuadrada2(5))
 
-// console.log(raizQuadrada(12))
+console.log(raizQuadrada(12))
 
-// // 7 - Parametro opcional
-// const multiplicacao = function(m,n) {
-//     if(n === undefined){
-//         return m * 2
-//     }
-//     else{
-//         return m * n
-//     }
-// }
+// 7 - Parametro opcional
+const multiplicacao = function(m,n) {
+    if(n === undefined){
+        return m * 2
+    }
+    else{
+        return m * n
+    }
+}
 
-// console.log(multiplicacao(5))
+console.log(multiplicacao(5)) // como tem apenas o m e não o  n entra no if
 
-// console.log(multiplicacao(2, 4))
+console.log(multiplicacao(2, 4))
 
-// const saudacao = (name) => { //Exemplo de um uso mais real
-//     if(!name){ //se ele der undefined, vai mudar e fazer o que está dentro
-//         console.log("Olá!")
-//         return
-//     }
+const saudacao = (name) => { //Exemplo de um uso mais real
+    if(!name){ //se ele não tiver um nome
+        console.log("Olá!")
+        return
+    }
 
-//     console.log(`Olá ${name}!`) //Caso seja definido
-// }
+    console.log(`Olá ${name}!`) //Caso seja definido
+}
 
-// saudacao()
+saudacao()
 
-// saudacao("Lorenzo")
+saudacao("Lorenzo")
 
 // 8 - valor default
 const custoSaudaçao = (name, comprimento = "Olá") => { //Caso não tenha nada atribuido no comprimento
     return `${comprimento}, ${name}` //O comprimento é atribuido o "Olá"
 }
 
-console.log(custoSaudaçao("Lorenzo"))
+console.log(custoSaudaçao("Lorenzo")) // não tendo o cumprimento ele fica como olá
 
 console.log(custoSaudaçao("Lorenzo", "Bom dia"))
 
