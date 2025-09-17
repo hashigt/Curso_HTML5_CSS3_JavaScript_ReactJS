@@ -21,6 +21,10 @@ const numeros = [5, 4, 3]
 console.log(numeros.length) //length mostra a quantidades de elementos dentro de uma lista
                             //Forma mais comum de inserir propriedades .propriedade
 
+const name = "irulam"
+
+console.log(name.length)
+
 // 4 - Métodos
 const outroNum = [1, 2, 3]
 
