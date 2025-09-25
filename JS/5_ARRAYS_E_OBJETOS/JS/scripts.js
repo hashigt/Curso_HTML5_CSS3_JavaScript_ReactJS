@@ -71,7 +71,7 @@ delete carro.km // deletando uma propriedade
 
 console.log(carro)
 
-// 
+// 7 - mais sobre objetos
 const obj = {
     a: "teste",
     b: true,
