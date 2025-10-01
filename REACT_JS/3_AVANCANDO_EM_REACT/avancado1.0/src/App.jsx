@@ -7,7 +7,7 @@ import noite from"./assets/night.jpg";
 import Data from './components/data';
 
 // 4 - renderizaçao de lista
-import ListaRender from './components/listaRender';
+import ListaRender from './components/listaRender'
 
 function App() {
   return (
@@ -24,6 +24,8 @@ function App() {
 
         {/* 4 - renderizaçao de lista */}
         <ListaRender />
+
+        
       </div>
   )
 }

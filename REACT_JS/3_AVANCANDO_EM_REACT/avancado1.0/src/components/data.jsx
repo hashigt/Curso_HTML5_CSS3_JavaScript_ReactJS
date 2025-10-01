@@ -3,7 +3,7 @@ import {useState} from "react"
 const Data = () => {
     //let someData = 10; - exemplo de como não funciona
 
-    const [numero, setNumero] = useState(15); //o que está dentro () é o valor inicial
+    const [numero, setNumero] = useState(17); //o que está dentro () é o valor inicial
     const [input, setInput] = useState("Nada");
 
   return (
@@ -20,7 +20,7 @@ const Data = () => {
 
     <div>
         <p>Escreva algo: {input}</p>
-        <input value={input} onChange={muda => setInput(event.target.value)} /> {/* onChange pega a mudança no input*/}
+        <input value={input} onChange={muda => setInput(muda.target.value)} /> {/* onChange pega a mudança no input*/}
         {/* value está pegando o valor do input  / setInput atualiza o estado do input*/}
     </div>
     </div>
