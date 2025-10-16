@@ -1,0 +1,4 @@
+p { /*Lembrar de quando for modificar apenas um componente, usar ID para o css não vazar e afetar outras áreas*/
+    color: green; 
+    border-bottom: 1px solid #111;
+}
