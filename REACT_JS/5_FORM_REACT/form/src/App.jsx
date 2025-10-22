@@ -8,7 +8,7 @@ function App() {
   return (
       <div className="card">
         <h1>Form em react</h1>
-        <MyForm />
+        <MyForm userName ="Lorenzo" userEmail="lorezan@saaf.com"/>
       </div>
   )
 }
