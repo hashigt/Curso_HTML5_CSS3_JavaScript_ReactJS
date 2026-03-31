@@ -61,7 +61,7 @@ document.addEventListener("keyup", (e) => { // keyup: ativa quando a tecla é so
 })
 
 document.addEventListener("keydown", (e) => { // keydown: quando é pressionada
-    console.log(`soltou a tecla ${e.key}`)
+    console.log(`pressionou a tecla ${e.key}`)
 })
 
 // 7 - Eventos de mouse
@@ -117,22 +117,22 @@ window.addEventListener("beforeumload", (e) => { // // beforeumload: quando o us
 
 // 12 - técnica de debouce
 //é utilizada para fazer um evento disparar menos vezes, para poupar memória
-const debouce = (f, delay) => { //delay é o tempo que ela ocorre
+// const debouce = (f, delay) => { //delay é o tempo que ela ocorre
 
-    let timeout //let ao inves de const para conseguir mudar o valor
+//     let timeout //let ao inves de const para conseguir mudar o valor
 
-    return(...arguments) => { //mostrar todos argumentos da função
-        if(timeout){ //se tiver um timeout, se envocar mais de uma vez tem que matar o timeout atual
-            clearTimeout(timeout) //limpar o timeout para ele pode começar denovo
-        }
+//     return(...arguments) => { //mostrar todos argumentos da função
+//         if(timeout){ //se tiver um timeout, se envocar mais de uma vez tem que matar o timeout atual
+//             clearTimeout(timeout) //limpar o timeout para ele pode começar denovo
+//         }
 
-        timeout = setTimeout(() =>{
-            f.apply(arguments) //execução da função com o argumento, programando uma execução da função
-        }, delay) 
-    }
-}
+//         timeout = setTimeout(() =>{
+//             f.apply(arguments) //execução da função com o argumento, programando uma execução da função
+//         }, delay) 
+//     }
+// }
 
-window.addEventListener("mousemove", debouce(() => {
-    console.log("Executando a cada 400ms") //será o f do debouce
-}, 400)
-)
+// window.addEventListener("mousemove", debouce(() => {
+//     console.log("Executando a cada 400ms") //será o f do debouce
+// }, 400)
+// )

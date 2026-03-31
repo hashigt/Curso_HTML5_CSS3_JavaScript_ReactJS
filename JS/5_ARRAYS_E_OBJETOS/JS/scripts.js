@@ -21,9 +21,9 @@ const numeros = [5, 4, 3]
 console.log(numeros.length) //length mostra a quantidades de elementos dentro de uma lista
                             //Forma mais comum de inserir propriedades .propriedade
 
-const name = "irulam"
+const names = "irulam"
 
-console.log(name.length)
+console.log(names.length)
 
 // 4 - Métodos
 const outroNum = [1, 2, 3]
@@ -42,16 +42,16 @@ console.log(text.indexOf("g")) //indexOf: Localiza o lugar do elemento entre par
 
 // 5 - objetos
 const personagem = { //se usa {} ao inves de []
-    nome: "Lorenzo", //, para serapar as propriedades
+    nome: "Lorenzo", //virgula para separar as propriedades
     ano: 19,
-    job: "Estagiario",
+    job: "Estagiario",  
 }
 
 console.log(personagem)
 
-console.log(personagem.nome)
+console.log(personagem.nome) //acessando uma propriedade do objeto, usa-se o ponto .
 
-console.log(typeof personagem)
+console.log(typeof personagem) // objeto
 
 // 6 - Criando e deletando dados
 const carro = {
@@ -80,12 +80,12 @@ const obj = {
 console.log(obj instanceof Object) //instanceof  verifica se um objeto é filho de uma classe
 
 const obj2 = {
-    c: [],
+    c: [], // lista vazia   
 }
 
-Object.assign(obj2, obj)
+Object.assign(obj2, obj) // assign: copia as propriedades de um objeto para outro 
 
-console.log(obj2)
+console.log(obj2) // todas propriedades de obj foram copiadas para obj2 
 
 // 8 - Conhecendo melhor os objetos
 console.log(Object.keys(obj)) //keys: verifica as propriedades de um objeto
@@ -124,7 +124,7 @@ for(let i = 0; i < user.length; i++){ //user.length vai ver quantos elementos o 
 // 11 - Push e pop
 const array = ["a", "b", "c"]
 
-array.push("d") //.push adiciona um elemento no final do array, pode adicionar varios elementos
+array.push("d") //.push adiciona um elemento no final do array, pode adicionar varios elementos ("d", "e", "f")
 
 console.log(array)
 
@@ -134,7 +134,7 @@ array.pop() //.pop remove um elemento do final do array
 
 console.log(array)
 
-const itemRemovido = array.pop() //O pop fica guardado, assim conseguindo adicionar em uma variavel
+const itemRemovido = array.pop() //As variaveis removidas com o pop ficam guardadas, assim conseguindo adicionar em uma variavel
 
 console.log(itemRemovido)
 
@@ -167,7 +167,7 @@ const testeSlice = ["a", "b", "c", "d", "e", "f"]
 const subMatriz = testeSlice.slice(2, 4) //slice vai mostrar os elementos de x até x - 2 até 4
 
 console.log(subMatriz) //Mas há um problema ele não mostra o ultimo, (2, 4)exemplo("c", "d")
-
+ 
 console.log(testeSlice)
 
 const subMatriz2 = testeSlice.slice(2, 4 + 1) //Para mostrar o ultimo elemento precisa adicionar o +1
@@ -205,11 +205,9 @@ if(marcas.includes("BMW")) { //uma forma de usar o includes
 }
 
 // 17 - Reverse
-//Ele inverte os elementos de um array
-
 const reverseTest = [1, 2, 3, 4, 5]
 
-reverseTest.reverse()
+reverseTest.reverse() //Ele inverte os elementos de um array
 
 console.log(reverseTest)
 
@@ -225,7 +223,7 @@ console.log(trimTeste.trim())//Trim Remove tudo que não é texto em uma string(
 const testePadstart = "1"
 
 const novoNum  = testePadstart.padStart(4, "0") //onde está o 4 delimita o tamanho/depois da virgula escreve o que quer que apareca
-//o padstart colcoca para ser inserio antes da variavel
+//o padstart coloca para ser inserio antes da variavel
 console.log(testePadstart)
 
 console.log(novoNum)
@@ -260,7 +258,7 @@ const palavra = "testando "
 console.log(palavra.repeat(4)) //repete n vezes onde n é o valor dentro ()
 
 // 23 - rest operator
-const somaInfinita = (...arg) => { //... aceita qualquer tipo 
+const somaInfinita = (...arg) => { //... aceita TODOS os argumentos passados para a função e coloca dentro de uma array
     let total = 0
 
     for(let i = 0; i < arg.length; i++){
@@ -269,17 +267,17 @@ const somaInfinita = (...arg) => { //... aceita qualquer tipo
     return total
 }
 
-console.log(somaInfinita(1, 2, 3,))
+console.log(somaInfinita(1, 2, 3))
 
 console.log(somaInfinita(1, 2, 3, 4, 5, 6, 7))
 
 // 24 - for of
 //o número da repetição é baseado no array utilizado
 
-const somaInfinita2 = (...arg) => { //é parecido com o for, mas é mais simples
-    total = 0
+const somaInfinita2 = (...arg) => { 
+    let total = 0
 
-    for(num of arg){
+    for(num of arg){ // nomeia cada elemento do array com base no array arg, o i se torna num
         total+=num
     }
     return total
@@ -299,7 +297,7 @@ const {primeiroNome, sobrenome, trabalho} = detalhesUser
 console.log(primeiroNome, sobrenome, trabalho)
 
 // renomear varialvel
-const {primeiroNome: nomeUm} = detalhesUser
+const {primeiroNome: nomeUm} = detalhesUser // indentifica o primeiroNome e cria a variavel nomeUm com o valor de primeiroNome
 
 console.log(nomeUm) //a variavel anterior não deixa de existir
 

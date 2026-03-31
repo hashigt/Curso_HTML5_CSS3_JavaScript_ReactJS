@@ -22,7 +22,7 @@
 // const promessa = Promise.resolve(5 + 5)//Promise vai criar e resolve vai resolver expressao inicial
 
 // console.log("Algum código")
-
+ 
 // promessa
 //   .then((value) => { //then metodo que levar indiante o promise
 //     console.log(`A soma é ${value}`)
@@ -103,6 +103,6 @@ function* Generators() {
 
 const gen = Generators() //precisa ser dentro de uma varivel
 
-console.log(gen.next().value) //ele busca o valor conforme é chamado
-console.log(gen.next().value) 
-console.log(gen.next().value) 
+console.log(gen.next().value) //ele busca o valor conforme é chamado = 1
+console.log(gen.next().value) // = 2
+console.log(gen.next().value) // = 3

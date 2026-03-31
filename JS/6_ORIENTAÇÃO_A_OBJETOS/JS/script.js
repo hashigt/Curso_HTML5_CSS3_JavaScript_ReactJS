@@ -36,7 +36,7 @@ console.log(pessoa.getNome())
 //fallback: quando uma propriedade não existe em um dado/objeto, ela é procurada no seu ancestral
 const text = "abc"
 
-console.log(Object.getPrototypeOf(text)) //Object.getPrototypeOf mostra o ancestral do dado
+console.log(Object.getPrototypeOf(text)) //Object.getPrototypeOf mostra os ancestrais
 
 const bool = true
 
@@ -46,7 +46,7 @@ const arr = []
 
 console.log(Object.getPrototypeOf(arr))
 
-
+// mais sobre prototype
 const myObject = {
     a: "b"
 }
@@ -174,13 +174,13 @@ console.log(novoNome)
 
 console.log(Humano.prototype.idade)
 
-Humano.prototype.idade = "Não definido"
+Humano.prototype.idade = "Não definido" // já deixar um valor padrão par a idade, caso não seja definido na criação do objeto
 
 console.log(novoNome.idade)
 
 console.log(Humano.prototype.idade)
 
-10 - Symbol
+// 10 - Symbol
 // Quando utilizamos o recurso de symbol com classe, é  possível uma propriedade única e imutável
 // é útil quando a um dado que se repetirá em todos os objetos criados a partir da classe
 class Aviao {
@@ -190,10 +190,11 @@ class Aviao {
     }
 }
 
-const asas = Symbol()
-const pilotos = Symbol()
+const asas = Symbol() // não vai estar no objeto, mas sim no prototype
 
 Aviao.prototype[asas] = 2
+
+const pilotos = Symbol()
 
 Aviao.prototype[pilotos] = 3
 

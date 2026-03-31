@@ -34,6 +34,19 @@ console.log(resultado1) //imprimi o resultado da soma no console
 
 console.log(soma(c,d)) //Ou pode ser feito assim, sem precisar colocar em uma variavel
 
+
+function maiorValor(x,y){ //função que retorna o maior valor entre dois números
+    if(x > y) {
+        return x
+    }
+    else {
+        return y
+    }
+}
+
+console.log('Maior valor: ' + maiorValor(15,10))
+console.log(maiorValor(5,20))
+
 // 3 - Escopo da função
 let y = 10
 
